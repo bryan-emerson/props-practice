@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Button from '../Button/index.js'
+import './style.css'
 
 export default class ChildOne extends Component {
   state = {
@@ -21,9 +23,10 @@ export default class ChildOne extends Component {
       items = this.props.funky(this.props.party)
     }
 
-    //console.log(this)
+    console.log(this.props.upOne)
     return(
-      <div>
+      <div className='child'>
+        <Button countPlus={this.props.upOne}/>
         <ul>
           {items}
         </ul>

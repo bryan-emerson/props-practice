@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import './style.css'
 
 export default class Button extends Component {
   render(){
+    console.log('from button', this.props)
     return(
-      <div>
-        <button>Count up Brodie!</button>
+      <div className='button'>
+        <button onClick={this.props.countPlus}>Count up Brodie!</button>
       </div>
     )
   }

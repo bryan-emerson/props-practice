@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ChildOne from '../ChildOne/index.js'
+import './style.css'
 
 export default class Parent extends Component {
   state = {
@@ -35,10 +36,10 @@ export default class Parent extends Component {
   render() {
     console.log("line 31", this.state.kidData)
     return (
-      <div>
+      <div className='parent'>
         <p>sup widdit</p>
         <p>peep the count:{this.state.count}</p>
-        <ChildOne party={this.state.partyArr} funky={this.getArrItems} call={this.handleCallback} />
+        <ChildOne party={this.state.partyArr} funky={this.getArrItems} call={this.handleCallback} upOne={this.countPlus}/>
         {this.state.kidData}
 
       </div>
