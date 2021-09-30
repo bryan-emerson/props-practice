@@ -4,7 +4,7 @@ import './style.css'
 
 export default class ChildOne extends Component {
   state = {
-    actArr: ['skis', 'bike', 'tent', 'camera', 'helmet'],
+    actArr: ['skis', 'bike', 'tent', 'camera', 'helmet', 'backpack'],
     word: 'Skiing'
   }
 
