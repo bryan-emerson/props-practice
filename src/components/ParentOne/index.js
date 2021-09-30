@@ -6,11 +6,16 @@ export default class Parent extends Component {
   state = {
     partyArr: ['tacos', 'capri suns', 'jernts', 'sour gummies', 'popsicles', 'bbq chips'],
     workArr: ['pencils', 'erasers', 'stapler', 'calendar', 'alarm clock'],
-    count: 1
+    count: 1,
+    kidData: null
   }
 
   handleCallback = (childData) => {
-    this.setState({ kidData: childData })
+    let tempArr = [];
+    for (let i = 0; i < childData.length; i++) {
+      tempArr.push(<li>{childData[i]}</li>);
+    }
+    this.setState({ kidData: tempArr })
   }
 
   countPlus = ()=>{
